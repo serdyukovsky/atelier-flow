@@ -1,0 +1,4 @@
+interface:
+  display_name: "Personal Agent Template"
+  short_description: "Reusable product and website development workflow"
+  default_prompt: "Use this template to brief, plan, implement, review, and verify a project task."

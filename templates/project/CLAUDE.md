@@ -1,0 +1,1 @@
+Read `AGENTS.md` first. Use the selected profile and the smallest workflow that fits the task. Treat `PROJECT.md` as agent-maintained project memory: if it is missing, create it from the user's prompt after asking only blocking questions. Do not require the user to fill a form. Do not implement before resolving material ambiguity in the brief.
