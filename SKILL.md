@@ -9,11 +9,11 @@ Use this skill as the operating system for a personal AI-assisted project. It se
 
 ## First decision: select the mode
 
-- **Quick**: tiny copy, style, or bug fix. Implement, test, report.
-- **Standard**: normal feature or page. Brief, plan, implement, review, fix, verify.
-- **Complex**: new product area, redesign, architecture, payments, auth, or multi-screen flow. Use independent planning, UX/architecture review, implementation, code review, browser review, fixes, and final verification.
+- **Quick**: tiny copy, style, or bug fix. Read only the nearby context, implement, run one relevant check if needed, report.
+- **Standard**: normal feature or page. Brief, focused plan, implement, proportionate review, targeted verification.
+- **Complex**: new product area, redesign, architecture, payments, auth, or multi-screen flow. Use independent planning, UX/architecture review, implementation, code review, browser review when relevant, fixes, and final verification.
 
-Do not use the complex workflow by default. Choose the smallest mode that protects quality.
+Do not use the complex workflow by default. Choose the smallest mode that protects quality. Select checks from `workflows/verification-scope.md`; a full suite is for a release or a genuinely high-risk change, not ordinary iteration.
 
 ## Project intake
 
@@ -24,7 +24,7 @@ Before implementation, inspect the repository and read:
 3. the selected profile under `profiles/`;
 4. the existing `package.json`, scripts, and test setup.
 
-Before any non-trivial implementation, run the capability gate described in `templates/project/workflows/bootstrap.md`. If a `build-required` capability is missing, stop before coding and ask whether to install it, continue in a declared degraded mode, or stop. A missing `release-required` capability prevents a release-ready claim.
+Run the capability gate described in `templates/project/workflows/bootstrap.md` for a new project, a changed stack, or a task that needs an unverified capability. Reuse the recorded capability status for ordinary iterations. If a `build-required` capability is missing, stop before coding and ask whether to install it, continue in a declared degraded mode, or stop. A missing `release-required` capability prevents a release-ready claim.
 
 If the brief is missing, do not ask the user to complete a form. Infer a first brief from the natural-language request, collect only information that changes the result, and write the project context yourself. Ask no more than three questions in one round. If a detail is non-critical, make an explicit assumption and continue.
 
@@ -71,8 +71,8 @@ When `profiles/website/` is selected:
 - use one coherent component foundation; do not mix visual libraries casually;
 - use shadcn/Base UI/Radix for functional primitives when compatible with the project;
 - use one visual effects library selectively, not everywhere;
-- inspect the real page in a browser at desktop and mobile sizes;
-- verify loading, empty, error, focus, contrast, reduced-motion, and overflow states;
+- inspect the affected page in a browser when a change affects visible UI or interaction; use full desktop/mobile review for a material visual direction or release;
+- verify only the states affected by the change; run the full loading, empty, error, focus, contrast, reduced-motion, and overflow pass for material UI work or release;
 - never invent metrics, testimonials, logos, or product screenshots without labeling them as examples.
 
 ## Definition of done
@@ -87,7 +87,7 @@ A task is not complete when code merely compiles. Report:
 
 If browser or test verification was impossible, state that explicitly.
 
-For standard and complex tasks, keep `workflow-log.md` and `VERIFICATION.md` truthful and current. Keep visual evidence in `docs/reviews/` for a material website direction. Derive verification commands from the repository; never invent a passing check.
+Update `VERIFICATION.md` when the stack or its commands change. Add to `workflow-log.md` only for a material decision, capability issue, degraded mode, failed check, review finding, or release. Keep visual evidence in `docs/reviews/` for a material website direction. Derive verification commands from the repository; never invent a passing check.
 
 ## Included project skeleton
 

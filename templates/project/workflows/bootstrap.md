@@ -1,6 +1,6 @@
 # Capability bootstrap and gate
 
-Run this before scaffolding and before any non-trivial workflow.
+Run this before scaffolding, after a stack/capability change, or when a task needs an unverified tool. Do not rerun it for every ordinary iteration.
 
 ## 1. Inspect the environment
 
@@ -52,7 +52,7 @@ After the stack is known, create or update `VERIFICATION.md` from the actual `pa
 
 ## 6. Continue with an activation summary
 
-At the start of the task, report:
+When bootstrap runs, report:
 
 ```text
 Profile:

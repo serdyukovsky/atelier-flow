@@ -2,19 +2,19 @@
 
 ## Start of every task
 
-1. Read this file, `PROJECT.md`, relevant profile instructions, `VERIFICATION.md`, and nearby code.
-2. Classify the task as `quick`, `standard`, or `complex`.
-3. State the selected mode and any assumptions.
-4. For standard and complex work, create or update a plan before implementation.
+1. Read this file and nearby code. Load `PROJECT.md`, a profile, `VERIFICATION.md`, or another workflow only when it affects the requested change or has not already been established in the current task.
+2. Classify the task as `quick`, `standard`, or `complex`, then select a verification scope using `workflows/verification-scope.md`.
+3. State the selected mode, verification scope, and any assumptions in one compact line.
+4. For standard and complex work, create or update a plan before implementation. A quick task needs no plan.
 5. For a greenfield project, select and record one stack preset before scaffolding.
 
 Use the **Active operating context** in `PROJECT.md` to load only the applicable profiles and workflows. Do not read or activate optional modules merely because they exist in the template.
 
 If `PROJECT.md` is missing or mostly empty, do not ask the user to fill out a form. Infer a first brief from the user's prompt, ask only blocking questions, then create or update `PROJECT.md` yourself. The user may edit it later, but manual editing is optional.
 
-Before non-trivial work, check `CAPABILITIES.md` and run `workflows/bootstrap.md`. If a build-required capability is missing, stop before implementation and ask the user whether to install it, continue without it in degraded mode, or stop. A release-required capability may not be silently bypassed when deciding the work is ready to ship. Never silently install external code or claim an unavailable capability was used.
+Run `workflows/bootstrap.md` once when starting a project, when the stack/capabilities change, or when a task requires an unverified tool. For ordinary work, read the existing `CAPABILITIES.md` instead of rediscovering every skill, MCP, browser, and environment variable. If a build-required capability is missing, stop before implementation and ask the user whether to install it, continue without it in degraded mode, or stop. A release-required capability may not be silently bypassed when deciding the work is ready to ship. Never silently install external code or claim an unavailable capability was used.
 
-After stack selection, maintain `VERIFICATION.md` from the actual package scripts and CI configuration. Record the task's real checks and results in `workflow-log.md`.
+After stack selection, maintain `VERIFICATION.md` from the actual package scripts and CI configuration. Revisit it only when commands, stack, or release requirements change. Log only material decisions, capability limits, failed checks, reviews, degraded work, or release evidence.
 
 For a new website or material redesign, run `workflows/visual-gate.md` before scaling a visual direction. A visual system is not accepted until real-browser screenshots and a separate review are recorded in `docs/reviews/`. If browser evidence is unavailable, run the fallback and escalation protocol in `workflows/browser-qa.md`; do not continue beyond a provisional visual slice until the user explicitly chooses a path.
 
@@ -40,7 +40,7 @@ For a new website or material redesign, run `workflows/visual-gate.md` before sc
 
 ## Collaboration protocol
 
-Use roles as sequential review checkpoints. A single agent may perform several roles, but review must be a separate pass. For complex work, use a fresh context for at least one reviewer when possible.
+Use roles proportionately. A quick task needs no role cycle. For standard work, add a focused review only when the change has meaningful behavioral or UI risk. For complex work, use sequential review checkpoints and a fresh context for at least one reviewer when possible.
 
 The standard loop is:
 
@@ -52,4 +52,4 @@ Do not start a debate unless two reasonable solutions have materially different 
 
 ## Completion report
 
-Always include changed files, checks run, assumptions, and remaining risks. Update `workflow-log.md` when its entry rules apply. Never claim browser or test verification that was not actually performed.
+Always include changed files, checks run or intentionally skipped with reason, assumptions, and remaining risks. Update `workflow-log.md` only when its entry rules apply. Never claim browser or test verification that was not actually performed.

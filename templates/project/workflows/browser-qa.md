@@ -1,6 +1,6 @@
 # Browser QA
 
-Use this workflow for every material page or visual change, before accepting a visual direction or calling a public site release-ready. Inspect the running application in a **real browser**. A source-code review, static HTML inspection, build result, `curl`, or generated social-preview image is not a substitute.
+Use this workflow for a new visual direction, material redesign, a changed interaction flow, or before calling a public site release-ready. Do not use the full workflow for copy-only, token-only, or isolated cosmetic changes. Inspect the running application in a **real browser**. A source-code review, static HTML inspection, build result, `curl`, or generated social-preview image is not a substitute.
 
 ## 1. Start a reproducible app
 
@@ -10,14 +10,14 @@ Use this workflow for every material page or visual change, before accepting a v
 
 ## 2. Exercise the page
 
-At minimum inspect the primary route at:
+For a new visual direction, material redesign, or release, inspect the primary route at:
 
 - desktop: 1440 × 900;
 - narrow mobile: 390 × 844.
 
-For each relevant route or changed component, check the first viewport, responsive layout, primary CTA, navigation, forms or dialogs, keyboard/focus behavior, loading/error/empty states, overflow, broken assets, and browser console errors. Check reduced motion when the page contains meaningful animation.
+For a changed interaction flow, inspect only the affected route, component, and states. For full Browser QA, check the first viewport, responsive layout, primary CTA, navigation, forms or dialogs, keyboard/focus behavior, loading/error/empty states, overflow, broken assets, and browser console errors. Check reduced motion when the page contains meaningful animation.
 
-Capture a screenshot at both required viewports and record the exact route, viewport, and file or URL in an evidence file under `docs/reviews/`.
+Capture screenshots and create evidence only for a new visual direction, material redesign, or release. For a focused interaction check, record the route and result in the completion report.
 
 ## 3. Persist when the first browser path fails
 
@@ -36,4 +36,6 @@ Never silently replace real browser review with source review. Do not expand a n
 
 ## 4. Report evidence
 
-Create or update the review file from `templates/visual-review-evidence.md`. Mark Browser QA as `verified` only when the running page was inspected at both viewports. Otherwise mark it `blocked`, link the recorded attempts, and state the user decision required to proceed.
+For a new visual direction, material redesign, or release, create or update the review file from `templates/visual-review-evidence.md`. Mark Browser QA as `verified` only when the running page was inspected at both viewports. Otherwise mark it `blocked`, link the recorded attempts, and state the user decision required to proceed.
+
+For a focused interaction check, report only the affected route, state, runtime, and result in the completion report. Do not create screenshots or a review file unless the change escalates to a material visual direction or release.
