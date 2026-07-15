@@ -21,6 +21,7 @@ Capabilities
 Execution
 - Plan/decision produced:
 - Visual evidence and review file:
+- Browser QA: runtime, primary/fallback attempts, verified or blocked status:
 - Reviews run and findings:
 - Verification commands and result:
 

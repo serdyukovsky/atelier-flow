@@ -18,7 +18,7 @@ For public sites, define indexable pages, search intent, canonical domain, langu
 
 ## 4. Visual direction and gate
 
-Run `visual-gate.md`. Produce a Design Read and two or three directions. Use references as principles, not as instructions to copy a site. The paper aesthetic is prohibited unless the user directly overrides that rule. Full creative freedom lets the agent choose, but still requires screenshot-backed review before the direction scales.
+Run `visual-gate.md`, including `browser-qa.md`. Produce a Design Read and two or three directions. Use references as principles, not as instructions to copy a site. The paper aesthetic is prohibited unless the user directly overrides that rule. Full creative freedom lets the agent choose, but still requires real-browser, screenshot-backed review before the direction scales.
 
 ## 5. Design system and assets
 
@@ -30,7 +30,7 @@ After the visual gate passes, build the first page or section as a quality slice
 
 ## 7. Review loop
 
-Run visual review, accessibility/performance review, and SEO launch review. Fix findings in a separate pass. Re-render desktop and mobile after fixes.
+Run visual review, accessibility/performance review, and SEO launch review. Fix findings in a separate pass, then rerun `browser-qa.md` at desktop and mobile after fixes.
 
 ## 8. Release
 

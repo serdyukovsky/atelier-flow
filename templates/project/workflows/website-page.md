@@ -7,4 +7,4 @@
 5. Implement one section at a time using the existing component foundation.
 6. Read `profiles/website/visual-components.md` before using a visual library; keep to the recorded effect budget.
 7. Review copy, hierarchy, typography, contrast, states, motion, accessibility, performance, and metadata.
-8. Open the page in a browser at desktop and mobile sizes; fix visual and interaction defects. Record screenshot evidence for a material direction.
+8. Run `browser-qa.md`; fix visual and interaction defects. Record screenshot evidence for a material direction, or follow its required fallback and blocker protocol.

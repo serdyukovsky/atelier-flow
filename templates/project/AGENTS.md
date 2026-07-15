@@ -16,7 +16,7 @@ Before non-trivial work, check `CAPABILITIES.md` and run `workflows/bootstrap.md
 
 After stack selection, maintain `VERIFICATION.md` from the actual package scripts and CI configuration. Record the task's real checks and results in `workflow-log.md`.
 
-For a new website or material redesign, run `workflows/visual-gate.md` before scaling a visual direction. A visual system is not accepted until browser screenshots and a separate review are recorded in `docs/reviews/`. If browser evidence is unavailable, ask before continuing beyond a provisional visual slice.
+For a new website or material redesign, run `workflows/visual-gate.md` before scaling a visual direction. A visual system is not accepted until real-browser screenshots and a separate review are recorded in `docs/reviews/`. If browser evidence is unavailable, run the fallback and escalation protocol in `workflows/browser-qa.md`; do not continue beyond a provisional visual slice until the user explicitly chooses a path.
 
 ## Scope control
 

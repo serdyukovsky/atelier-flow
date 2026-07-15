@@ -27,9 +27,9 @@ Select the component foundation and any effect using `profiles/website/visual-co
 
 ## 4. Capture proof
 
-Run the page and capture the real slice at desktop and narrow mobile viewports. Create an evidence file from `templates/visual-review-evidence.md` in `docs/reviews/`.
+Run `browser-qa.md` for the real slice. Capture the real page at desktop and narrow mobile viewports, then create an evidence file from `templates/visual-review-evidence.md` in `docs/reviews/`.
 
-If browser or screenshot capture is unavailable, report that visual proof is blocked. Do not mark the direction as accepted or silently expand it across the site. Ask whether to enable a browser, continue as a provisional draft, or stop the visual task.
+Browser QA must make the required fallback attempts before it can be called blocked. If it remains blocked, do not mark the direction as accepted or silently expand it across the site. Follow the explicit user-decision path in `browser-qa.md`.
 
 ## 5. Review independently
 

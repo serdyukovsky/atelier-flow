@@ -27,7 +27,7 @@ Before a new page, establish or update `design-system/MASTER.md` with:
 - real assets and content assumptions;
 - responsive behavior and accessibility requirements.
 
-For a new visual system or material redesign, run `workflows/visual-gate.md`. Full creative freedom lets the agent choose a direction but does not permit it to expand that direction across the site before a screenshot-backed review.
+For a new visual system or material redesign, run `workflows/visual-gate.md` and `workflows/browser-qa.md`. Full creative freedom lets the agent choose a direction but does not permit it to expand that direction across the site before real-browser, screenshot-backed review. A failed first browser attempt requires the fallback and user-decision protocol; it is not permission to skip QA.
 
 ## Frontend foundation
 
@@ -41,7 +41,7 @@ Read `content-and-ia.md` and `assets.md` before implementing a new page. Do not 
 
 ## Quality bar
 
-The page must have a clear first viewport, readable hierarchy, coherent tokens, mobile behavior, visible states, accessible controls, and a browser visual review before completion. A material visual direction also needs desktop/mobile screenshot evidence and a separate UX/anti-slop review in `docs/reviews/`.
+The page must have a clear first viewport, readable hierarchy, coherent tokens, mobile behavior, visible states, accessible controls, and passed Browser QA before completion. A material visual direction also needs desktop/mobile screenshot evidence and a separate UX/anti-slop review in `docs/reviews/`.
 
 Read `accessibility-performance.md` before release and distinguish checks that were verified from checks that were not run.
 

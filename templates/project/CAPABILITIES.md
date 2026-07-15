@@ -18,7 +18,7 @@ This file is maintained by the agent. It records what the current environment ca
 | UI/UX design skill | skill | recommended for website | unknown |  |
 | Built-in anti-slop visual guidance | project instructions | build-required for website | available | Website profile and UX review |
 | taste-skill (visual critic) | skill | recommended for important marketing pages | unknown |  |
-| Browser automation and screenshot capture | MCP/tool | release-required for accepted visual direction | unknown |  |
+| Browser automation and screenshot capture | MCP/tool | build-required for visual-gate acceptance; release-required for public-site visual sign-off | unknown | runtime, attempts, screenshots, or blocker |
 | shadcn registry / MCP | MCP/tool | optional | unknown |  |
 | Motion or selected effect library | package | optional | unknown |  |
 | Image generation | tool |  | unknown |  |

@@ -1,12 +1,12 @@
 # Visual and UX review
 
-Review the running application, not only the source code.
+Run `browser-qa.md`, then review the running application rather than only the source code. A source-only review may identify risks but cannot close this workflow.
 
 For a material visual direction, create or update an evidence file in `docs/reviews/` from `templates/visual-review-evidence.md`. Capture desktop and narrow-mobile screenshots before returning findings.
 
 ## Check
 
-- desktop, tablet, and narrow mobile layouts;
+- desktop, tablet when relevant, and narrow mobile layouts;
 - first viewport and primary CTA;
 - navigation, forms, dialogs, hover, focus, loading, empty, and error states;
 - typography wrapping and overflow;

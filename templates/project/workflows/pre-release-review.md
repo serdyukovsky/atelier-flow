@@ -4,7 +4,7 @@ Run the applicable reviews before deployment:
 
 - functionality and acceptance criteria;
 - typecheck, lint, tests, and build;
-- browser/mobile visual review;
+- passed `browser-qa.md` with desktop/mobile evidence; source review does not substitute;
 - desktop and mobile visual evidence for each material visual direction;
 - SEO launch review for public sites;
 - security baseline;
