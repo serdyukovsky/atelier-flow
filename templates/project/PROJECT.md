@@ -46,6 +46,16 @@ This file is maintained by the agent. The user does not need to fill it manually
 
 Keep this section current. It is the short source of truth for which template parts apply to the project; do not load unrelated profiles by default.
 
+## Visual contract
+
+- Visual autonomy: user selects / agent proposes / agent chooses after checkpoint
+- Desired impression and reference principles:
+- Paper aesthetic: prohibited unless directly overridden by the user
+- Explicit paper override, if any:
+- Visual evidence location: `docs/reviews/`
+
+“Paper” includes warm cream or beige paper surfaces, paper texture or grain, torn/printed-paper treatment, faux editorial print, and handmade/analog material styling. Do not infer permission from a vague editorial reference.
+
 ## Capability policy
 
 - Missing required capability: stop and ask before implementation

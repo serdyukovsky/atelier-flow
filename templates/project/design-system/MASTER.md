@@ -12,6 +12,16 @@ Describe the page/product, audience, visual language, and intended emotional imp
 - Design variance (1-10):
 - Motion intensity (1-10):
 - Visual density (1-10):
+- Effect budget: primary / supporting / none
+
+## Visual contract
+
+- Visual autonomy: user selects / agent proposes / agent chooses after checkpoint
+- Desired impression and reference principles:
+- Paper aesthetic: prohibited unless directly overridden by the user
+- Explicit paper override, if any:
+
+Paper includes warm cream or beige paper surfaces, paper texture or grain, torn/printed-paper treatment, faux editorial print, and handmade/analog material styling. Do not infer permission from a vague editorial reference.
 
 ## Tokens
 
@@ -28,7 +38,7 @@ Describe the page/product, audience, visual language, and intended emotional imp
 
 ## Components
 
-Document only components actually used. Keep one icon family and one coherent visual foundation.
+Document only components actually used. Keep one icon family and one coherent visual foundation. If selecting a component or effect library, record the component, why it earns its place, and its mobile/reduced-motion fallback.
 
 ## Motion
 

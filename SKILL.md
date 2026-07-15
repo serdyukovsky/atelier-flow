@@ -24,13 +24,13 @@ Before implementation, inspect the repository and read:
 3. the selected profile under `profiles/`;
 4. the existing `package.json`, scripts, and test setup.
 
-Before any non-trivial implementation, run the capability gate described in `templates/project/workflows/bootstrap.md`. If a capability marked `required` is missing, stop before coding and ask whether to install it, continue in a declared degraded mode, or stop.
+Before any non-trivial implementation, run the capability gate described in `templates/project/workflows/bootstrap.md`. If a `build-required` capability is missing, stop before coding and ask whether to install it, continue in a declared degraded mode, or stop. A missing `release-required` capability prevents a release-ready claim.
 
 If the brief is missing, do not ask the user to complete a form. Infer a first brief from the natural-language request, collect only information that changes the result, and write the project context yourself. Ask no more than three questions in one round. If a detail is non-critical, make an explicit assumption and continue.
 
 Never claim a missing skill, MCP server, browser, API, or dependency was used. Record capability status in `CAPABILITIES.md`. Use the active operating context in `PROJECT.md` and do not load unrelated optional modules by default.
 
-For a new website, first produce a one-line **Design Read**, two or three visual directions, and a proposed design-system map. Do not code the page before the user selects a direction unless the user explicitly asks for a fast draft.
+For a new website, run `templates/project/workflows/visual-gate.md`: establish a visual contract, produce a Design Read and directions, build one visual slice, capture desktop/mobile evidence, review it, and only then scale the direction. Full creative freedom lets the agent choose; it never waives the visual checkpoint.
 
 For a public website, also classify SEO scope: `none`, `basic launch`, or `growth/content`. Use the SEO profile and workflow when search visibility, share previews, indexing, structured data, or Core Web Vitals matter.
 
@@ -63,7 +63,9 @@ When a decision is genuinely contested, write alternatives, trade-offs, and a re
 
 When `profiles/website/` is selected:
 
-- use the available UI/UX design skill and built-in anti-slop guidance; use `taste-skill` only as an optional independent visual pass;
+- use the available UI/UX design skill and built-in anti-slop guidance; use `taste-skill` as a recommended independent visual critic for important marketing pages when it is available;
+- treat paper aesthetics as prohibited unless the user directly overrides that rule; never infer permission from a vague editorial reference;
+- use component/effect libraries selectively according to `profiles/website/visual-components.md`; a library is not a visual direction;
 - use the SEO profile when the site is public or intended to acquire visitors from search;
 - create or update `design-system/MASTER.md` before building a new page;
 - use one coherent component foundation; do not mix visual libraries casually;
@@ -85,8 +87,8 @@ A task is not complete when code merely compiles. Report:
 
 If browser or test verification was impossible, state that explicitly.
 
-For standard and complex tasks, keep `workflow-log.md` and `VERIFICATION.md` truthful and current. Derive verification commands from the repository; never invent a passing check.
+For standard and complex tasks, keep `workflow-log.md` and `VERIFICATION.md` truthful and current. Keep visual evidence in `docs/reviews/` for a material website direction. Derive verification commands from the repository; never invent a passing check.
 
 ## Included project skeleton
 
-The reusable files are in `templates/project/`. Copy that directory into a new project, then select one profile and remove profiles you do not need. Workflow details are in `templates/project/workflows/`.
+The reusable files are in `templates/project/`. When this source repository is open, create a separate project with `scripts/new-project.sh`; never build product code in the template source itself. Workflow details are in `templates/project/workflows/`.

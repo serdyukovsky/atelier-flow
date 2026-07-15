@@ -14,7 +14,9 @@ Do not jump directly from a vague brief to JSX unless the user explicitly asks f
 
 ## Design process
 
-Use the available UI/UX design skill as the broad foundation and the built-in anti-slop guidance as a visual specialist. `taste-skill` can add an independent visual pass when installed and useful, but it is optional. Adapt rules to the brief; do not apply aesthetic bans mechanically.
+Use the available UI/UX design skill as the broad foundation and the built-in anti-slop guidance as a visual specialist. For an important marketing page, use `taste-skill` as an independent visual critic when available; it is recommended, not a blocking dependency. Adapt rules to the brief; do not apply aesthetic bans mechanically.
+
+Paper aesthetics are prohibited unless the user directly overrides that rule. This includes warm cream or beige paper surfaces, paper texture or grain, torn/printed-paper treatment, faux editorial print, and handmade/analog material styling. A vague editorial reference is not an override.
 
 Before a new page, establish or update `design-system/MASTER.md` with:
 
@@ -25,9 +27,11 @@ Before a new page, establish or update `design-system/MASTER.md` with:
 - real assets and content assumptions;
 - responsive behavior and accessibility requirements.
 
+For a new visual system or material redesign, run `workflows/visual-gate.md`. Full creative freedom lets the agent choose a direction but does not permit it to expand that direction across the site before a screenshot-backed review.
+
 ## Frontend foundation
 
-Prefer the project's existing stack. For a new compatible React project, prefer TypeScript, Tailwind, shadcn/ui, and accessible primitives such as Radix or Base UI. Use Motion for purposeful animation. Add Magic UI, Aceternity, React Bits, or Motion Primitives only when a specific component benefits from it.
+Prefer the project's existing stack. For a new compatible React project, prefer TypeScript, Tailwind, shadcn/ui, and accessible primitives such as Radix or Base UI. Use Motion for purposeful animation. Read `visual-components.md` before adding Magic UI, Aceternity, React Bits, Motion Primitives, or another visual library.
 
 Never mix several visual systems casually. Check `package.json` before importing a dependency.
 
@@ -37,7 +41,7 @@ Read `content-and-ia.md` and `assets.md` before implementing a new page. Do not 
 
 ## Quality bar
 
-The page must have a clear first viewport, readable hierarchy, coherent tokens, mobile behavior, visible states, accessible controls, and a browser visual review before completion.
+The page must have a clear first viewport, readable hierarchy, coherent tokens, mobile behavior, visible states, accessible controls, and a browser visual review before completion. A material visual direction also needs desktop/mobile screenshot evidence and a separate UX/anti-slop review in `docs/reviews/`.
 
 Read `accessibility-performance.md` before release and distinguish checks that were verified from checks that were not run.
 

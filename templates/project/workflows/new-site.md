@@ -16,9 +16,9 @@ Create a page inventory and outline each page's job, audience, primary action, o
 
 For public sites, define indexable pages, search intent, canonical domain, language/location scope, social previews, and measurement baseline. Use `seo-launch.md` for implementation checks.
 
-## 4. Visual direction
+## 4. Visual direction and gate
 
-Produce a Design Read and two or three directions. Use references as principles, not as instructions to copy a site. Wait for the user's choice when the directions materially differ.
+Run `visual-gate.md`. Produce a Design Read and two or three directions. Use references as principles, not as instructions to copy a site. The paper aesthetic is prohibited unless the user directly overrides that rule. Full creative freedom lets the agent choose, but still requires screenshot-backed review before the direction scales.
 
 ## 5. Design system and assets
 
@@ -26,7 +26,7 @@ Write `design-system/MASTER.md` and an asset inventory. Lock typography, colors,
 
 ## 6. Implementation
 
-Build the first page or section as a quality slice. Reuse the chosen foundation, keep dependencies deliberate, and use real or clearly marked assets.
+After the visual gate passes, build the first page or section as a quality slice. Reuse the chosen foundation, keep dependencies deliberate, and use real or clearly marked assets.
 
 ## 7. Review loop
 

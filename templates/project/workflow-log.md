@@ -20,6 +20,7 @@ Capabilities
 
 Execution
 - Plan/decision produced:
+- Visual evidence and review file:
 - Reviews run and findings:
 - Verification commands and result:
 

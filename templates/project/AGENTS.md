@@ -12,9 +12,11 @@ Use the **Active operating context** in `PROJECT.md` to load only the applicable
 
 If `PROJECT.md` is missing or mostly empty, do not ask the user to fill out a form. Infer a first brief from the user's prompt, ask only blocking questions, then create or update `PROJECT.md` yourself. The user may edit it later, but manual editing is optional.
 
-Before non-trivial work, check `CAPABILITIES.md` and run `workflows/bootstrap.md`. If a required capability is missing, stop before implementation and ask the user whether to install it, continue without it in degraded mode, or stop. Never silently install external code or claim an unavailable capability was used.
+Before non-trivial work, check `CAPABILITIES.md` and run `workflows/bootstrap.md`. If a build-required capability is missing, stop before implementation and ask the user whether to install it, continue without it in degraded mode, or stop. A release-required capability may not be silently bypassed when deciding the work is ready to ship. Never silently install external code or claim an unavailable capability was used.
 
 After stack selection, maintain `VERIFICATION.md` from the actual package scripts and CI configuration. Record the task's real checks and results in `workflow-log.md`.
+
+For a new website or material redesign, run `workflows/visual-gate.md` before scaling a visual direction. A visual system is not accepted until browser screenshots and a separate review are recorded in `docs/reviews/`. If browser evidence is unavailable, ask before continuing beyond a provisional visual slice.
 
 ## Scope control
 

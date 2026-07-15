@@ -6,7 +6,7 @@ Run this before scaffolding and before any non-trivial workflow.
 
 Check the project files, package manager, installed dependencies, available skills, configured MCP/tools, browser runtime, and relevant environment variables without printing secrets. Read the **Active operating context** in `PROJECT.md`; do not inspect every optional profile.
 
-Use the selected profile, stack preset, and workflow to determine which capabilities are `required`, `recommended`, or `optional`. Do not treat every capability mentioned in the template as required.
+Use the selected profile, stack preset, and workflow to determine which capabilities are `build-required`, `release-required`, `recommended`, or `optional`. Do not treat every capability mentioned in the template as required.
 
 ## 2. Update CAPABILITIES.md
 
@@ -21,12 +21,12 @@ Record status as one of:
 
 Include evidence and limitations. Do not expose credentials.
 
-## 3. Stop on missing required capability
+## 3. Stop on missing build-required capability
 
 Before implementation, report:
 
 ```text
-BLOCKED: required capability is missing.
+BLOCKED: build-required capability is missing.
 Capability: ...
 Why it is required: ...
 Install command or setup path: ...
@@ -39,6 +39,8 @@ Choose one:
 ```
 
 Do not write product code until the user chooses. If the user chooses degraded mode, record the decision and adapt the workflow explicitly.
+
+For a missing `release-required` capability, implementation may continue only if it is not needed for the current build slice. Mark the affected result not release-ready, record the limitation, and ask before bypassing the release gate.
 
 ## 4. Install safely
 

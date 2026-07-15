@@ -4,7 +4,8 @@ This file is maintained by the agent. It records what the current environment ca
 
 ## Policy
 
-- `required` missing: stop before implementation and ask whether to install, continue in degraded mode, or stop.
+- `build-required` missing: stop before implementation and ask whether to install, continue in degraded mode, or stop.
+- `release-required` missing: do not call the affected work release-ready; ask before bypassing it.
 - `recommended` missing: ask if it materially affects quality; otherwise continue and record the limitation.
 - `optional` missing: continue unless the user requests it.
 - Installing external code, packages, MCP servers, browsers, or API integrations requires user confirmation.
@@ -14,10 +15,12 @@ This file is maintained by the agent. It records what the current environment ca
 
 | Capability | Kind | Required for current workflow? | Status | Evidence / limitation |
 |---|---|---:|---|---|
-| UI/UX design skill | skill |  | unknown |  |
-| Built-in anti-slop visual guidance | project instructions |  | available | Website profile and UX review |
-| taste-skill (optional visual specialist) | skill |  | unknown |  |
-| Browser automation | MCP/tool |  | unknown |  |
+| UI/UX design skill | skill | recommended for website | unknown |  |
+| Built-in anti-slop visual guidance | project instructions | build-required for website | available | Website profile and UX review |
+| taste-skill (visual critic) | skill | recommended for important marketing pages | unknown |  |
+| Browser automation and screenshot capture | MCP/tool | release-required for accepted visual direction | unknown |  |
+| shadcn registry / MCP | MCP/tool | optional | unknown |  |
+| Motion or selected effect library | package | optional | unknown |  |
 | Image generation | tool |  | unknown |  |
 | SEO audit suite | skill/tool |  | unknown |  |
 | Figma MCP | MCP/tool |  | unknown |  |
@@ -32,7 +35,7 @@ This file is maintained by the agent. It records what the current environment ca
 
 ## Installation decisions
 
-Record the user's decision when a required capability is missing:
+Record the user's decision when a build-required or release-required capability needs a decision:
 
 ```text
 Date:
