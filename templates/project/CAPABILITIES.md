@@ -18,7 +18,8 @@ This file is maintained by the agent. It records what the current environment ca
 | UI/UX design skill | skill | recommended for website | unknown |  |
 | Built-in anti-slop visual guidance | project instructions | build-required for website | available | Website profile and UX review |
 | taste-skill (visual critic) | skill | recommended for important marketing pages | unknown |  |
-| Browser automation and screenshot capture | MCP/tool | build-required for visual-gate acceptance; release-required for public-site visual sign-off | unknown | runtime, attempts, screenshots, or blocker |
+| Playwright CLI + Chromium | terminal tool | build-required for visual-gate acceptance; release-required for public-site visual sign-off | unknown | CLI/browser version, smoke-test result, screenshots, or blocker |
+| Browser MCP / connected browser | MCP/tool | optional fallback | unknown | use only after Playwright CLI fails |
 | shadcn registry / MCP | MCP/tool | optional | unknown |  |
 | Motion or selected effect library | package | optional | unknown |  |
 | Image generation | tool |  | unknown |  |

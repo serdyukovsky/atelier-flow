@@ -16,7 +16,7 @@ Run `workflows/bootstrap.md` once when starting a project, when the stack/capabi
 
 After stack selection, maintain `VERIFICATION.md` from the actual package scripts and CI configuration. Revisit it only when commands, stack, or release requirements change. Log only material decisions, capability limits, failed checks, reviews, degraded work, or release evidence.
 
-For a new website or material redesign, run `workflows/visual-gate.md` before scaling a visual direction. A visual system is not accepted until real-browser screenshots and a separate review are recorded in `docs/reviews/`. If browser evidence is unavailable, run the fallback and escalation protocol in `workflows/browser-qa.md`; do not continue beyond a provisional visual slice until the user explicitly chooses a path.
+For a new website or material redesign, run `workflows/visual-gate.md` before scaling a visual direction. A visual system is not accepted until real-browser screenshots and a separate review are recorded in `docs/reviews/`. Use Playwright CLI as the primary browser tool. If browser evidence is unavailable, run the two-attempt bounded protocol in `workflows/browser-qa.md`, record `blocked` once, and do not retry it on ordinary prompts until the environment changes or the user explicitly asks.
 
 ## Scope control
 

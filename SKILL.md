@@ -30,7 +30,7 @@ If the brief is missing, do not ask the user to complete a form. Infer a first b
 
 Never claim a missing skill, MCP server, browser, API, or dependency was used. Record capability status in `CAPABILITIES.md`. Use the active operating context in `PROJECT.md` and do not load unrelated optional modules by default.
 
-For a new website, run `templates/project/workflows/visual-gate.md` and `templates/project/workflows/browser-qa.md`: establish a visual contract, produce a Design Read and directions, build one visual slice, inspect it in a real browser at desktop/mobile sizes, review it, and only then scale the direction. Full creative freedom lets the agent choose; it never waives the visual checkpoint. A failed browser attempt triggers fallback attempts and an explicit user decision; source review never substitutes for browser evidence.
+For a new website, run `templates/project/workflows/visual-gate.md` and `templates/project/workflows/browser-qa.md`: establish a visual contract, produce a Design Read and directions, build one visual slice, inspect it in a real browser at desktop/mobile sizes, review it, and only then scale the direction. Prefer the installed Playwright CLI + Chromium for browser QA. Full creative freedom lets the agent choose; it never waives the visual checkpoint. A failed browser attempt gets one fallback, then a recorded blocker and explicit user decision; source review never substitutes for browser evidence.
 
 For a public website, also classify SEO scope: `none`, `basic launch`, or `growth/content`. Use the SEO profile and workflow when search visibility, share previews, indexing, structured data, or Core Web Vitals matter.
 

@@ -27,7 +27,7 @@ Before a new page, establish or update `design-system/MASTER.md` with:
 - real assets and content assumptions;
 - responsive behavior and accessibility requirements.
 
-For a new visual system or material redesign, run `workflows/visual-gate.md` and `workflows/browser-qa.md`. Full creative freedom lets the agent choose a direction but does not permit it to expand that direction across the site before real-browser, screenshot-backed review. A failed first browser attempt requires the fallback and user-decision protocol; it is not permission to skip QA.
+For a new visual system or material redesign, run `workflows/visual-gate.md` and `workflows/browser-qa.md`. Full creative freedom lets the agent choose a direction but does not permit it to expand that direction across the site before real-browser, screenshot-backed review. Use Playwright CLI + Chromium first. A failed attempt gets one fallback and then a recorded blocker; it is not permission to skip QA or repeatedly diagnose the same environment.
 
 ## Frontend foundation
 

@@ -1,4 +1,4 @@
-# Atelier Flow v1.2.2
+# Atelier Flow v1.2.3
 
 Личный шаблон рабочего процесса для разработки продуктов с ИИ-агентами. Он помогает вести сайт или приложение от брифа до проверки, но не является готовым сайтом, фреймворком или набором автоматически запускаемых агентов.
 
@@ -81,6 +81,19 @@ Modules: basic SEO + security baseline
 
 shadcn MCP помогает находить доступные примитивы интерфейса. Magic UI, Aceternity, React Bits и Motion — не обязательный «пакет красоты»: агент выбирает их только для конкретного компонента после visual gate и в рамках effect budget.
 
+## Рабочий браузер для агента
+
+Для реальной проверки сайт использует официальный Playwright CLI, а не полагается на случайно доступный browser MCP. Он работает из терминала и для Codex, и для Claude Code; MCP остаётся только fallback-путём. Один раз на компьютере установи CLI и его Chromium:
+
+```bash
+npm install -g @playwright/cli@latest
+playwright-cli install-browser chromium
+```
+
+В Claude Code дополнительно можно один раз в папке конкретного проекта выполнить `playwright-cli install --skills` — это поставит справку по командам для Claude. Codex использует CLI по правилам шаблона и без этого шага.
+
+В проекте агент запускает `scripts/browser-qa.sh <url>`. Скрипт сохраняет desktop/mobile-скриншоты и console errors, а подробный вывод CLI оставляет в файле вместо чата. При сбое агент делает один fallback, фиксирует `blocked` и не повторяет дорогую диагностику до изменения среды или явной команды пользователя.
+
 ## Visual gate
 
 Для нового сайта, редизайна или новой визуальной системы агент обязан:
@@ -125,6 +138,7 @@ templates/project/
   docs/reviews/          # скриншоты и доказательства visual review
   profiles/              # website, CMS, security, mini apps и другое
   stack-presets/         # согласованные варианты стека
+  scripts/browser-qa.sh  # реальная browser QA через Playwright CLI
   workflows/             # сценарии работы
     browser-qa.md         # обязательный протокол реальной проверки в браузере
 ```
