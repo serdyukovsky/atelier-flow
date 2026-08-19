@@ -13,23 +13,20 @@ Mode: quick / standard / complex
 Profile and stack preset:
 Workflows activated:
 
-Capabilities
-- Used:
-- Not used:
-- Missing or degraded mode:
-
 Execution
-- Plan/decision produced:
-- Visual evidence and review file:
-- Browser QA: runtime, primary/fallback attempts, verified or blocked status:
-- Reviews run and findings:
-- Verification commands and result:
+- What was decided or built, and why. Prose, not a form — the reasoning is the part
+  worth keeping.
+- Capability limits, degraded modes, or blocked checks: only when one actually
+  occurred. `CAPABILITIES.md` holds the standing status; do not restate it here.
+- Browser QA: what was inspected, at which viewports, and where the evidence is.
+  Only when it ran.
 
 Outcome
 - Applied:
-- Verified:
-- Not applicable:
+- Verified: the commands and their real result.
 - Assumptions, risks, or follow-up:
 ```
 
 Use observed facts only. Do not record a review, command, capability, or result that did not happen.
+
+Write the entry once, at the end of the task. Fields that have nothing to say are left out, not filled with `n/a`.

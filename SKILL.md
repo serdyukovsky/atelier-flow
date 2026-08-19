@@ -40,7 +40,7 @@ For greenfield projects, select one preset from `templates/project/stack-presets
 
 ## Role protocol
 
-Roles are checkpoints, not a requirement to launch separate agents every time:
+Roles are checkpoints, not a requirement to launch separate agents every time. Every separate agent starts cold and re-derives context you already have, so the default is one context and sequential passes:
 
 - **Planner**: scope, constraints, acceptance criteria, affected files, risks.
 - **UX/Design reviewer**: hierarchy, user flow, visual language, accessibility, anti-slop risks.

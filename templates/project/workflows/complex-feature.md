@@ -12,4 +12,6 @@ Use for a new product area, redesign, architecture change, authentication, payme
 8. Fixer: address findings and rerun failed checks.
 9. Final verification: compare the result against the brief and acceptance criteria; run a full suite only for a release or when the risk scope requires it.
 
+These nine steps are passes over the work, not nine agents. Run them in one context unless a step names a reason for independence. Collapse any step the change does not touch, and say in the report which ones were collapsed and why.
+
 Store material decisions as `docs/decisions/ADR-###-short-name.md`.

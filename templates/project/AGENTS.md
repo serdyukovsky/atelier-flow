@@ -40,7 +40,9 @@ For a new website or material redesign, run `workflows/visual-gate.md` before sc
 
 ## Collaboration protocol
 
-Use roles proportionately. A quick task needs no role cycle. For standard work, add a focused review only when the change has meaningful behavioral or UI risk. For complex work, use sequential review checkpoints and a fresh context for at least one reviewer when possible.
+Use roles proportionately. A quick task needs no role cycle. For standard work, add a focused review only when the change has meaningful behavioral or UI risk. For complex work, run the checkpoints in sequence in the same context.
+
+A fresh context is not free: the new reviewer re-reads the repository, the project files and the diff before it can say anything, and that re-derivation is the expensive part, not the review. Spend it on at most one reviewer, and only when independence is the actual point — a release, a security boundary, or a visual direction the implementer has already defended once.
 
 The standard loop is:
 
